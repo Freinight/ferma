@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛОГС</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        function digitalClock() {
+         var date = new Date();
+         var hours = date.getHours();
+         var minutes = date.getMinutes();
+         var seconds = date.getSeconds();
+           if (hours < 10) hours = "0" + hours;
+           if (minutes < 10) minutes = "0" + minutes;
+           if (seconds < 10) seconds = "0" + seconds;
+             document.getElementById("id_clock").innerHTML = hours + ":" + minutes + ":" + seconds;
+             setTimeout("digitalClock()", 1000);
+        }
+       </script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            
+            <div id="id_clock"></div>
+    <script>digitalClock();</script>
+            <div class="firma">СИТИ ФЕРМА
+                   ЛОГС
+            </div>
+        </header>
+        <center><main>
+            <div class="kvadrat">
+                <div class="text">ПОКАЗАНИЯ В НОРМЕ</div>
+                <img src="images/free-icon-tick-mark-2191121.png" width="20px">
+            </div>
+
+            <div class="kvadrat1">
+                <div class="text">УПРАВЛЕНИЕ ОСВЕЩЕНИЕМ</div>
+            </div>
+
+            <div class="yroven">
+                <div class="text1">УРОВЕНЬ 1</div>
+                <div class="text1">УРОВЕНЬ 2</div>
+                <div class="text1">УРОВЕНЬ 3</div>
+            </div>
+            <div class="yroven2">
+            <input type="checkbox" class="input">
+            <input type="checkbox" class="input">
+            <input type="checkbox" class="input">
+        </div>
+        <div class="poliv">
+        <div class="kvadrat2">
+            <div class="text">КОНТРОЛЬ КОЛИЧЕСТВА ПОЛИВА</div>
+        </div>
+    </div>
+        
+        <div class="krug">
+                
+        </div>
+        <div class="pokazatel">
+        </div>
+        <div class="kvadrat3">
+            <div class="text">КАМЕРЫ ВИДЕОНАБЛЮДЕНИЯ</div>
+        </div>
+
+        <div class="kamera">
+            <div class="video"></div>
+            <div class="border"></div>
+            
+        </div>
+        <div class="kvadrat1">
+            <div class="text">ТЕКУЩЕЕ СОСТОЯНИЕ</div>
+        </div>
+        <div class="sostoyanie">
+            <div class="text1">ТЕМПЕРАТУРА <br>
+                20°C  </div>
+            <div class="text1">УРОВЕНЬ ЖИДКОСТИ <br> 100% </div>
+            <div class="text1">ВЛАЖНОСТЬ <br> 40% </div>
+            <div class="text1">ВЕНТИЛЯЦИЯ <br> 1100 ОБ/М </div>
+        </div>
+
+        <div class="kvadrat1">
+            <div class="text">КОММЕНТАРИИ</div>
+        </div>
+
+        <div class="comments">
+            <div class="kvadrat4">
+                <input value="НАПИСАТЬ..." class="text3">
+            </div>
+            <div class="kvadrat4">
+                <input value="НАПИСАТЬ..." class="text3">
+            </div>
+        </div>
+        <div class="kvadrat1">
+            <div class="text">ПОСЛЕДНЯЯ АКТИВНОСТЬ </div>
+        </div>
+         <div class="aktivnost"></div>
+        
+
+        </main></center>
+    </div>
+
+    
+<div class="slider">
+    <label for="fader">Литры </label>
+    <input type="range" min="0" max="100" value="50" id="fader" 
+    step="20" list="volsettings">
+    <datalist id="volsettings">
+    <option>0</option>
+    <option>20</option>
+    <option>40</option>
+    <option>60</option>
+    <option>80</option>
+    <option>100</option>
+    </datalist>
+    </div>
+</body>
+</html>
